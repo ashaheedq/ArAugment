@@ -38,7 +38,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        'markovify', 'google_trans_new'
+        'markovify', 'google_trans_new', 'requests'
     ],
     extras_require={
         'dev': ['check-manifest'],
