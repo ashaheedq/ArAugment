@@ -1,22 +1,30 @@
 
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ar-augment",
+    name="araugment",
     version="1.0.0",
     author="Abdulshaheed Alqunber",
-    author_email="abdulshaheedalqunber@gmail.com",
+    author_email="abdulshaheed.qunber@kaust.edu.sa",
     license="MIT",
     description="Augment Arabic data for deep learning tasks",
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords='arabic, arabic nlp, nlp',
-    url="https://github.com/ashaheedq/ArAugment",
-    packages=setuptools.find_packages(),
+    url="https://github.com/ashaheedq/araugment",
+    project_urls={
+        'Documentation': 'https://github.com/ashaheedq/araugment',
+        'Bug Reports':
+        'https://github.com/ashaheedq/araugment/issues',
+        'Source Code': 'https://github.com/ashaheedq/araugment',
+    },
+    package_dir={'': 'src'},
+    packages=setuptools.find_packages(where='src'),
     classifiers=[
+        # see https://pypi.org/classifiers/
         'Development Status :: 5 - Production/Stable',
         'Natural Language :: Arabic',
         'Programming Language :: Python :: 3',
@@ -32,5 +40,8 @@ setuptools.setup(
     install_requires=[
         'markovify', 'google_trans_new'
     ],
-
+    extras_require={
+        'dev': ['check-manifest'],
+        # 'test': ['coverage'],
+    },
 )

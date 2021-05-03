@@ -1,4 +1,4 @@
-# ArAugment
+# araugment
 ### Version 1.0.0
 
 Augment Arabic data for deep learning tasks
@@ -45,7 +45,7 @@ print(markov(doc, 5))
 
 License
 ====
-ArAugment is licensed under the MIT License. The terms are as follows:  
+araugment is licensed under the MIT License. The terms are as follows:  
 
 ```
 MIT License  
