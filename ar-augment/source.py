@@ -4,7 +4,7 @@
 from google_trans_new import google_translator  
 import markovify as mk
 
-def back_translate(text, original="ar", language="zh"):
+def back_translate(text, language_src="ar", language_dst="zh"):
     """Translate text to a foreign language then translate back to original language to augment data
     Parameters:
     text (string): non-empty string
@@ -19,9 +19,9 @@ def back_translate(text, original="ar", language="zh"):
     try:
         t = google_translator()
         # translate to target language
-        translated_text = t.translate(text.strip(), language)
+        translated_text = t.translate(text.strip(), language_dst)
         # translate to orignal language
-        translated_back = t.translate(translated_text, original)
+        translated_back = t.translate(translated_text, language_src)
         return translated_back
     
     # failed to translate, return original
@@ -29,7 +29,7 @@ def back_translate(text, original="ar", language="zh"):
         return text
 
 def markov(document, n):
-    """This package uses Markov chains to string together n new sequences of words based on previous sequences.
+    """This method uses Markov chains to string together n new sequences of words based on previous sequences.
     
     Parameters:
     document (list): list of sentences
@@ -37,3 +37,6 @@ def markov(document, n):
     Returns:
     list: list of new generated sentences
     """
+
+    text_model = mk.Text(document)
+    return [text_model.make_sentence() for i in range(n)]
