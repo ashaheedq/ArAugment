@@ -1,5 +1,6 @@
 # araugment
-### Version 1.0.0
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-araugment-brightgreen)](https://pypi.org/project/araugment/) [![version number](https://img.shields.io/pypi/v/araugment?color=green&label=version)](https://github.com/ashaheedq/araugment/releases) [![Actions Status](https://github.com/ashaheedq/araugment/workflows/Test/badge.svg)](https://github.com/ashaheedq/araugment/actions) [![License](https://img.shields.io/github/license/ashaheedq/araugment)](https://github.com/ashaheedq/araugment/blob/main/LICENSE)
 
 Augment Arabic data for deep learning tasks
 
